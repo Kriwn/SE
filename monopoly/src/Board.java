@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 
 public class Board {
-    private ArrayList<Square> board;
+    private final ArrayList<Square> board;
 
     public Board() {
         board = new ArrayList<>();

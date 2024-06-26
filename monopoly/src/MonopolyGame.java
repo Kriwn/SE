@@ -2,11 +2,11 @@
 import java.util.ArrayList;
 
 public class MonopolyGame {
-    private int _roundCut;
-    private ArrayList<Player> players;
-    private int _maxNum;
-    private Dice _dice1;
-    private Dice _dice2;
+    private final int _roundCut;
+    private final ArrayList<Player> players;
+    private final int _maxNum;
+    private final Dice _dice1;
+    private final Dice _dice2;
 
     public MonopolyGame(int value)
     {

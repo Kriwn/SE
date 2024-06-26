@@ -1,6 +1,6 @@
 //6510450143 kritt
 public class Square {
-    private String _name;
+    private final String _name;
     private int _pos;
 
     public Square(String name, int pos) {

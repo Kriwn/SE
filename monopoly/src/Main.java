@@ -3,8 +3,7 @@
  */
 public class Main {
     public static void main() {
-        // MonopolyGame(num)
-    MonopolyGame monopolyGame = new MonopolyGame(  -1);
+    MonopolyGame monopolyGame = new MonopolyGame(  100);
     monopolyGame.playGame();
     }
 }

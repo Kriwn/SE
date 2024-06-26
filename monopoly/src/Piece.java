@@ -1,7 +1,7 @@
 //6510450143 kritt
 public class Piece {
     private int _locationg;
-    private Board _board;
+    private final Board _board;
 
     public Piece(Board _board)
     {

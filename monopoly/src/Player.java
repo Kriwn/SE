@@ -3,10 +3,10 @@ import java.util.ArrayList;
 
 public class Player {
     public String name;
-    private Dice  _dice1;
-    private Dice _dice2;
-    private Board _board;
-    private Piece piece;
+    private final Dice  _dice1;
+    private final Dice _dice2;
+    private final Board _board;
+    private final Piece piece;
 
     public Player(String name,Dice dice1,Dice dice2)
     {
