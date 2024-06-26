@@ -34,7 +34,6 @@ public class Board {
     public Square getSquare(int old, int total)
     {
         int temp = old + total;
-        // fix some condition
         while (temp >= board.size())
         {
             temp -= board.size();
