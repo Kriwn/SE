@@ -1,9 +1,11 @@
 //6510450143 kritt
 public class Piece {
     private int _locationg;
+    private Board _board;
 
-    public Piece()
+    public Piece(Board _board)
     {
+        this._board = _board;
         this._locationg = 0;
     }
 
@@ -14,8 +16,7 @@ public class Piece {
 
     public Square getLocation()
     {
-        Board board = new Board();
-       return board.getByLocation(this._locationg);
+       return this._board.getByLocation(this._locationg);
     }
 
 }

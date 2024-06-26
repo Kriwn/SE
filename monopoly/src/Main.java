@@ -1,6 +1,9 @@
-//6510450143 kritt
+/*
+ 6510450143 kritt
+ */
 public class Main {
     public static void main() {
+        // MonopolyGame(num)
     MonopolyGame monopolyGame = new MonopolyGame(8);
     monopolyGame.playGame();
     }

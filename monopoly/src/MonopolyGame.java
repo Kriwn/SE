@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class MonopolyGame {
     private int _roundCut;
+    private int _rountCount;
     private ArrayList<Player> players;
     private int _maxNum;
     private Dice _dice1;
@@ -42,9 +43,9 @@ public class MonopolyGame {
 
     public  void playGame(){
         System.out.printf("Start Game ALL player start at Go\n");
-        for (int i = 0; i < this._roundCut; i++) {
+        for (int i = 1; i <= this._roundCut; i++) {
+            System.out.println("Start Round" + i);
             playRound();
-            i++;
         }
     }
 

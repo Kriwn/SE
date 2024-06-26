@@ -14,7 +14,7 @@ public class Player {
         this._dice1 = dice1;
         this._dice2 = dice2;
         this._board = new Board();
-        this.piece = new Piece();
+        this.piece = new Piece(this._board);
     }
 
     public String getName()
