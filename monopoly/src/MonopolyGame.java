@@ -43,8 +43,8 @@ public class MonopolyGame {
 
     public  void playGame(){
         System.out.printf("Start Game ALL player start at Go\n");
-        for (int i = 1; i <= this._roundCut; i++) {
-            System.out.println("Start Round" + i);
+        for (int i = 0; i < this._roundCut; i++) {
+            System.out.println("Start Round " + i);
             playRound();
         }
     }
