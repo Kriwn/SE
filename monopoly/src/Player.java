@@ -30,7 +30,7 @@ public class Player {
         Square oldLoc = piece.getLocation();
         Square newLoc = _board.getSquare(oldLoc.getPos(),_dice1.get_faceValve() + _dice2.get_faceValve());
         piece.setLocation(newLoc.getPos());
-        System.out.printf("Player name %s move is %d to location at %s\n",getName(),_dice1.get_faceValve() + _dice2.get_faceValve(), piece.getLocation().getName());
+        System.out.printf("Player name %s move is %d to location at %s Locationis %d\n",getName(),_dice1.get_faceValve() + _dice2.get_faceValve(), piece.getLocation().getName(),piece.getLocation().getPos());
 
     }
 

@@ -3,7 +3,6 @@ import java.util.ArrayList;
 
 public class MonopolyGame {
     private int _roundCut;
-    private int _rountCount;
     private ArrayList<Player> players;
     private int _maxNum;
     private Dice _dice1;
@@ -11,6 +10,10 @@ public class MonopolyGame {
 
     public MonopolyGame(int value)
     {
+        if (value <= 0) {
+            System.err.println("MonopolyGame round should be greater than 0");
+            System.exit(22);
+        }
         _dice1 = new Dice();
         _dice2 = new Dice();
         players = new ArrayList<>();
@@ -22,6 +25,11 @@ public class MonopolyGame {
     }
 
     public MonopolyGame(int numPlayer,int value){
+        if (numPlayer < 2 || numPlayer > 8 || value <= 0)
+        {
+            System.err.println("Invalid number of players or round cut");
+            System.exit(22);
+        }
         String name[] = {"Non", "Ter", "Big", "Boss", "Palm", "Sun", "Mint", "Peak"};
         players = new ArrayList<>();
         _dice1 = new Dice();
