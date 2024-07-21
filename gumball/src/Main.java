@@ -3,7 +3,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        GumballMachine gumballMachine = new GumballMachine(2);
+        GumballMachine gumballMachine = new GumballMachine(10);
 
 
         gumballMachine.message();
@@ -29,5 +29,13 @@ public class Main {
         gumballMachine.insertQuarter();
         gumballMachine.turnCrank();
         gumballMachine.dispense();
+
+//        gumballMachine.message();
+//        gumballMachine.chooseFlavor("Orange");
+//        gumballMachine.chooseFlavor("Mango");
+//        gumballMachine.insertQuarter();
+//        gumballMachine.turnCrank();
+//        gumballMachine.dispense();
+
     }
 }

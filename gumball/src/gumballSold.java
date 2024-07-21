@@ -18,15 +18,15 @@ public class gumballSold implements State{
     @Override
     public void dispense(GumballMachine gumballMachine) {
         if (gumballMachine.getCount() == 1) {
-            System.out.println("A gumball come out the slot");
             gumballMachine.setCount(gumballMachine.getCount() - 1);
+            gumballMachine.release();
             System.out.println("Oops, out of gumball!");
             gumballMachine.setState(new outOfGumball());
         }
         else
         {
-            System.out.println("A gumball come out the slot");
             gumballMachine.setCount(gumballMachine.getCount() - 1);
+            gumballMachine.release();
             gumballMachine.setState(new noQuarter());
         }
     }

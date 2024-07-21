@@ -1,10 +1,15 @@
 // 6510450143 Kritt
 
+import java.util.Random;
+
 public class GumballMachine {
    private int count;
    private State state;
+   private String flavor;
+   private static final double JACKPOT_RATE = 0.1;
 
-   public GumballMachine(int count) {
+
+    public GumballMachine(int count) {
        if (count < 0) {
            this.count = 0;
            this.state = new outOfGumball();
@@ -13,6 +18,12 @@ public class GumballMachine {
            this.count = count;
            this.state = new noQuarter();
        }
+       this.flavor = "Mango";
+   }
+
+   public void chooseFlavor(String flavor)
+   {
+       this.flavor = flavor;
    }
 
    public void insertQuarter() {
@@ -37,6 +48,11 @@ public class GumballMachine {
        System.out.println();
    }
 
+   public void release()
+   {
+       System.out.println("A gumball come out the slot");
+       System.out.println("You got "+ this.getFlavor());
+   }
 
    public int getCount() {
        return this.count;
@@ -44,6 +60,10 @@ public class GumballMachine {
 
    public State getState() {
        return this.state;
+   }
+
+   public String getFlavor() {
+       return this.flavor;
    }
 
    public void setState (State state)
@@ -57,4 +77,9 @@ public class GumballMachine {
            count = 0;
        this.count = Count;
    }
+
+    public boolean isJackpot() {
+        Random random = new Random();
+        return random.nextDouble() < JACKPOT_RATE;
+    }
 }
