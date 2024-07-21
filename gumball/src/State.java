@@ -1,3 +1,5 @@
+// 6510450143 Kritt
+
 public interface State {
     void insertQuarter(GumballMachine gumballMachine);
     void ejectQuarter(GumballMachine gumballMachine);
