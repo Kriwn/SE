@@ -1,3 +1,5 @@
+//6510450143 Kritt
+
 public class PigoenAdpter implements Quackable{
     Pigeon pigeon;
 

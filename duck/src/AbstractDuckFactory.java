@@ -1,3 +1,5 @@
+//6510450143 Kritt
+
 public abstract class AbstractDuckFactory {
 
     public abstract Quackable createMallardDuck();

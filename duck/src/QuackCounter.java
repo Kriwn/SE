@@ -1,3 +1,5 @@
+//6510450143 Kritt
+
 public class QuackCounter implements Quackable{
     Quackable duck;
     static int numberOfQuacks;

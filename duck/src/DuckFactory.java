@@ -1,3 +1,5 @@
+//6510450143 Kritt
+
 public class DuckFactory extends AbstractDuckFactory{
     @Override
     public Quackable createMallardDuck() {

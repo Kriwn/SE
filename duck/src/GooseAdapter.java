@@ -1,3 +1,5 @@
+//6510450143 Kritt
+
 public class GooseAdapter implements Quackable{
     Goose goose;
     public GooseAdapter(Goose goose) {

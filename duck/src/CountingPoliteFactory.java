@@ -1,3 +1,5 @@
+//6510450143 Kritt
+
 public class CountingPoliteFactory extends AbstractDuckFactory{
 
     public Quackable createMallardDuck() {

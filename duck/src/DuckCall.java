@@ -1,3 +1,5 @@
+//6510450143 Kritt
+
 public class DuckCall implements Quackable{
     @Override
     public void quack() {
