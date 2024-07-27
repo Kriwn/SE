@@ -15,8 +15,14 @@ public class Flock implements Quackable{
 
             System.out.println("First Flock");
             quacker.quack();
+            System.out.println();
+
             quacker.quack();
+            System.out.println();
+
             quacker.quack();
+            System.out.println();
+
             quackers.removeFirst();
             iterator = quackers.iterator();
 
@@ -24,6 +30,7 @@ public class Flock implements Quackable{
         while (iterator.hasNext()) {
             Quackable quacker = (Quackable)iterator.next();
             quacker.quack();
+            System.out.println();
         }
     }
 }

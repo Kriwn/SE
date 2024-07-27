@@ -27,16 +27,22 @@
 //
 //    void simulate() {
 //        Quackable mallardDuck = new MallardDuck();
-//        Quackable redheadDuck = new RedheadDuck();
+//        Quackable redheadDuck = new RedHeadDuck();
 //        Quackable duckCall = new DuckCall();
 //        Quackable rubberDuck = new RubberDuck();
 //        Quackable gooseDuck = new GooseAdapter(new Goose());
-//        System.out.println(“\nDuck Simulator:With Goose Adapter”);
+//        Quackable pigeon = new PigoenAdpter(new Pigeon());
+//        System.out.println("\nDuck Simulator:With Goose Adapter");
 //        simulate(mallardDuck);
 //        simulate(redheadDuck);
 //        simulate(duckCall);
 //        simulate(rubberDuck);
 //        simulate(gooseDuck);
+//        simulate(pigeon);
+//    }
+//
+//        void simulate(Quackable duck) {
+//        duck.quack();
 //    }
 //}
 
@@ -47,12 +53,12 @@
 //    }
 //
 //    void simulate() {
-//        Quackable mallardDuck =new QuackCounter(new MallardDuck());
+//        Quackable mallardDuck =new PoliteDecorator(new MallardDuck());
 //        Quackable redheadDuck = new QuackCounter(new RedHeadDuck());
 //        Quackable duckCall = new QuackCounter(new DuckCall());
 //        Quackable rubberDuck = new QuackCounter(new RubberDuck());
 //        Quackable gooseDuck = new GooseAdapter(new Goose());
-//
+//        Quackable pigeon = new PigoenAdpter(new Pigeon());
 //        System.out.println("\nDuck Simulator with Decorator\n");
 //
 //        simulate(mallardDuck);
@@ -60,10 +66,14 @@
 //        simulate(duckCall);
 //        simulate(rubberDuck);
 //        simulate(gooseDuck);
+//        simulate(pigeon);
+//
+//        System.out.println("Quark Count is " + QuackCounter.getQuacks());
 //    }
 //
 //    void simulate(Quackable duck) {
 //        duck.quack();
+//        System.out.println();
 //    }
 //}
 
@@ -101,7 +111,7 @@ public class DuckSimulator {
 
         public static void main(String[] args) {
         DuckSimulator simulator = new DuckSimulator();
-        AbstractDuckFactory duckFactory = new CountingDuckFactory();
+        AbstractDuckFactory duckFactory = new CountingPoliteFactory();
         simulator.simulate(duckFactory);
     }
     // main method here
@@ -123,8 +133,6 @@ public class DuckSimulator {
         flock.add(gooseDuck);
 
         flock.quack();
-    }
-    void simulate(Quackable duck) {
-        duck.quack();
+        System.out.println("Count Polite is " + PoliteCounter.getQuacks());
     }
 }
